@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO Bioinformatics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <div class="content-wrapper">
+        <header>
+            <div class="logo">
+                <i class="fas fa-dna"></i>
+                <h1>UNO Bioinformatics</h1>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#introduction"><i class="fas fa-info-circle"></i> Introduction</a></li>
+                <li><a href="#tools"><i class="fas fa-dna"></i> NGS</a></li>
+                <li><a href="#databases"><i class="fas fa-database"></i> Databases</a></li>
+                <li><a href="#rnaseq"><i class="fas fa-microscope"></i> RNA-Seq Analysis</a></li>
+                <li><a href="#resources"><i class="fas fa-book"></i> Resources</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="introduction" class="section">
+                <h2>What is Bioinformatics?</h2>
+                <div class="intro-content">
+                    <p class="intro-text">Bioinformatics is an interdisciplinary field that combines biology, computer science, mathematics, and statistics to analyze and interpret biological data. It plays a crucial role in understanding complex biological systems and advancing medical research.</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature">
+                            <i class="fas fa-dna"></i>
+                            <h3>Sequence Analysis</h3>
+                            <p>Analysis of DNA, RNA, and protein sequences for genetic insights and evolutionary studies</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-microscope"></i>
+                            <h3>Structural Biology</h3>
+                            <p>Study of 3D molecular structures to understand biological functions and interactions</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Data Analysis</h3>
+                            <p>Computational processing and interpretation of large-scale biological datasets</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-flask"></i>
+                            <h3>Research Applications</h3>
+                            <p>Applications in drug discovery, personalized medicine, and disease research</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tools" class="section">
+                <h2>Next Generation Sequencing (NGS)</h2>
+                <div class="ngs-container">
+                    <div class="ngs-card">
+                        <div class="ngs-image">
+                            <img src="images/sequencing/illumina.jpeg" alt="Illumina Sequencing" class="tech-image">
+                        </div>
+                        <h3>Sequencing Technologies</h3>
+                        <ul class="tech-list">
+                            <li><i class="fas fa-check-circle"></i> Illumina (Short-read)</li>
+                            <li><i class="fas fa-check-circle"></i> PacBio (Long-read)</li>
+                            <li><i class="fas fa-check-circle"></i> Oxford Nanopore</li>
+                            <li><i class="fas fa-check-circle"></i> Ion Torrent</li>
+                        </ul>
+                    </div>
+
+                    <div class="ngs-card">
+                        <div class="ngs-image">
+                            <img src="images/sequencing/data-formats.jpeg" alt="Data Formats" class="tech-image">
+                        </div>
+                        <h3>Data Formats</h3>
+                        <ul class="format-list">
+                            <li><i class="fas fa-file-alt"></i> FASTQ (Raw reads)</li>
+                            <li><i class="fas fa-file-alt"></i> BAM/SAM (Aligned reads)</li>
+                            <li><i class="fas fa-file-alt"></i> VCF (Variants)</li>
+                            <li><i class="fas fa-file-alt"></i> GFF/GTF (Annotations)</li>
+                        </ul>
+                    </div>
+
+                    <div class="ngs-card">
+                        <div class="ngs-image">
+                            <img src="images/sequencing/ngs-databases.png" alt="NGS Databases" class="tech-image">
+                        </div>
+                        <h3>NGS Databases</h3>
+                        <ul class="database-list">
+                            <li><i class="fas fa-database"></i> SRA (Sequence Read Archive)</li>
+                            <li><i class="fas fa-database"></i> ENA (European Nucleotide Archive)</li>
+                            <li><i class="fas fa-database"></i> GEO (Gene Expression Omnibus)</li>
+                            <li><i class="fas fa-database"></i> dbSNP (Variants)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ngs-workflow">
+                    <h3>NGS Workflow</h3>
+                    <div class="workflow-steps">
+                        <div class="workflow-step">
+                            <i class="fas fa-vial"></i>
+                            <span>Sample Preparation</span>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <i class="fas fa-dna"></i>
+                            <span>Sequencing</span>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Data Analysis</span>
+                        </div>
+                        <div class="workflow-arrow">→</div>
+                        <div class="workflow-step">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Interpretation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    .ngs-workflow {
+                        padding: 30px;
+                        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+                        border-radius: 15px;
+                        margin: 30px 0;
+                        backdrop-filter: blur(10px);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .ngs-workflow h3 {
+                        text-align: center;
+                        margin-bottom: 25px;
+                        color: #fff;
+                        font-size: 1.5em;
+                        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .workflow-steps {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-wrap: nowrap;
+                        gap: 20px;
+                    }
+
+                    .workflow-step {
+                        background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+                        padding: 20px 30px;
+                        border-radius: 12px;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                        text-align: center;
+                        min-width: 180px;
+                        transition: all 0.3s ease;
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(5px);
+                    }
+
+                    .workflow-step:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                        background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+                    }
+
+                    .workflow-step i {
+                        font-size: 28px;
+                        color: #4a90e2;
+                        margin-bottom: 12px;
+                        display: block;
+                        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .workflow-step span {
+                        display: block;
+                        color: #fff;
+                        font-weight: 500;
+                        font-size: 1.1em;
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .workflow-arrow {
+                        color: #4a90e2;
+                        font-size: 24px;
+                        font-weight: bold;
+                        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                        opacity: 0.8;
+                    }
+
+                    @media (max-width: 768px) {
+                        .workflow-steps {
+                            flex-direction: column;
+                            gap: 15px;
+                        }
+                        
+                        .workflow-arrow {
+                            transform: rotate(90deg);
+                        }
+                        
+                        .workflow-step {
+                            min-width: 200px;
+                        }
+                    }
+                </style>
+            </section>
+
+            <section id="databases" class="section">
+                <h2>Biological Databases</h2>
+                <div class="database-scroll-container">
+                    <div class="database-scroll">
+                        <div class="database-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="500">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/databases/genbank-logo.png" alt="GenBank Logo" class="database-logo">
+                                    <h3>GenBank</h3>
+                                    <p>Nucleotide sequence database</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>GenBank</h3>
+                                    <p>Access over 200 million nucleotide sequences</p>
+                                    <a href="https://www.ncbi.nlm.nih.gov/genbank/" target="_blank" class="db-link">Visit Database</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="database-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="500">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/databases/uniprot-logo.png" alt="UniProt Logo" class="database-logo">
+                                    <h3>UniProt</h3>
+                                    <p>Protein sequence database</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>UniProt</h3>
+                                    <p>Comprehensive protein sequence and annotation data</p>
+                                    <a href="https://www.uniprot.org/" target="_blank" class="db-link">Visit Database</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="database-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="500">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/databases/pdb-logo.png" alt="PDB Logo" class="database-logo">
+                                    <h3>PDB</h3>
+                                    <p>Protein structure database</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>PDB</h3>
+                                    <p>3D structures of proteins and nucleic acids</p>
+                                    <a href="https://www.rcsb.org/" target="_blank" class="db-link">Visit Database</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="database-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="500">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/databases/sra-logo.png" alt="SRA Logo" class="database-logo">
+                                    <h3>SRA</h3>
+                                    <p>Sequence Read Archive</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>SRA</h3>
+                                    <p>Access over 200 million nucleotide sequences</p>
+                                    <a href="https://www.ncbi.nlm.nih.gov/sra/" target="_blank" class="db-link">Visit Database</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="database-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="500">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/databases/ena-logo.png" alt="ENA Logo" class="database-logo">
+                                    <h3>ENA</h3>
+                                    <p>European Nucleotide Archive</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>ENA</h3>
+                                    <p>Access over 200 million nucleotide sequences</p>
+                                    <a href="https://www.ebi.ac.uk/ena/" target="_blank" class="db-link">Visit Database</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="database-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="500">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/databases/geo-logo.png" alt="GEO Logo" class="database-logo">
+                                    <h3>GEO</h3>
+                                    <p>Gene Expression Omnibus</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>GEO</h3>
+                                    <p>Access over 200 million nucleotide sequences</p>
+                                    <a href="https://www.ncbi.nlm.nih.gov/geo/" target="_blank" class="db-link">Visit Database</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="database-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="500">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/databases/dbsnp-logo.png" alt="dbSNP Logo" class="database-logo">
+                                    <h3>dbSNP</h3>
+                                    <p>Single Nucleotide Polymorphism</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>dbSNP</h3>
+                                    <p>Access over 200 million nucleotide sequences</p>
+                                    <a href="https://www.ncbi.nlm.nih.gov/snp/" target="_blank" class="db-link">Visit Database</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="database-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="500">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/databases/ensembl-logo.png" alt="Ensembl Logo" class="database-logo">
+                                    <h3>Ensembl</h3>
+                                    <p>Genome annotation database</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>Ensembl</h3>
+                                    <p>Access over 200 million nucleotide sequences</p>
+                                    <a href="https://www.ensembl.org/" target="_blank" class="db-link">Visit Database</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="database-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="500">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/databases/kegg-logo.png" alt="KEGG Logo" class="database-logo">
+                                    <h3>KEGG</h3>
+                                    <p>Pathway and disease database</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>KEGG</h3>
+                                    <p>Access over 200 million nucleotide sequences</p>
+                                    <a href="https://www.kegg.jp/" target="_blank" class="db-link">Visit Database</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="database-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="500">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="images/databases/reactome-logo.png" alt="Reactome Logo" class="database-logo">
+                                    <h3>Reactome</h3>
+                                    <p>Pathway database</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>Reactome</h3>
+                                    <p>Access over 200 million nucleotide sequences</p>
+                                    <a href="https://reactome.org/" target="_blank" class="db-link">Visit Database</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rnaseq" class="section">
+                <h2>RNA-Seq Data Analysis</h2>
+                <div class="layout-toggle">
+                    <button id="layoutToggle" class="toggle-btn">
+                        <i class="fas fa-arrows-alt-h"></i>
+                        <span>Toggle Layout</span>
+                    </button>
+                </div>
+                <div class="rnaseq-workflow">
+                    <div class="workflow-container">
+                        <div class="workflow-row first-row">
+                            <div class="workflow-step">
+                                <div class="step-number">1</div>
+                                <i class="fas fa-vial"></i>
+                                <h3>Quality Control</h3>
+                                <p>Check sequence quality using FastQC/MultiQC for RNA-Seq data</p>
+                            </div>
+                            <div class="workflow-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="workflow-step">
+                                <div class="step-number">2</div>
+                                <i class="fas fa-dna"></i>
+                                <h3>Mapping</h3>
+                                <p>Map RNA-Seq reads to reference genome using STAR</p>
+                            </div>
+                            <div class="workflow-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="workflow-step">
+                                <div class="step-number">3</div>
+                                <i class="fas fa-calculator"></i>
+                                <h3>Read Counting</h3>
+                                <p>Count reads per gene using featureCounts</p>
+                            </div>
+                        </div>
+                        <div class="workflow-row second-row">
+                            <div class="workflow-step">
+                                <div class="step-number">4</div>
+                                <i class="fas fa-chart-line"></i>
+                                <h3>Differential Expression</h3>
+                                <p>Analyze gene expression using DESeq2</p>
+                            </div>
+                            <div class="workflow-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div class="workflow-step">
+                                <div class="step-number">5</div>
+                                <i class="fas fa-project-diagram"></i>
+                                <h3>Pathway Analysis</h3>
+                                <p>Perform GO and KEGG pathway enrichment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resources" class="section">
+                <h2>Learning Resources</h2>
+                <div class="resources-container">
+                    <div class="resource-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Tutorials</h3>
+                        <p>Step-by-step guides for beginners</p>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Documentation</h3>
+                        <p>Comprehensive tool documentation</p>
+                    </div>
+                    <div class="resource-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Community</h3>
+                        <p>Join our bioinformatics community</p>
+                    </div>
+                </div>
+
+                <style>
+                    .resources-container {
+                        display: flex;
+                        justify-content: center;
+                        gap: 30px;
+                        padding: 20px;
+                        flex-wrap: wrap;
+                    }
+
+                    .resource-card {
+                        background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+                        padding: 30px;
+                        border-radius: 15px;
+                        text-align: center;
+                        min-width: 250px;
+                        transition: all 0.3s ease;
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(5px);
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    .resource-card::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+                        transform: translateX(-100%);
+                        transition: 0.5s;
+                    }
+
+                    .resource-card:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                        background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+                    }
+
+                    .resource-card:hover::before {
+                        transform: translateX(100%);
+                    }
+
+                    .resource-card i {
+                        font-size: 40px;
+                        color: #4a90e2;
+                        margin-bottom: 20px;
+                        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .resource-card h3 {
+                        color: #fff;
+                        font-size: 1.5em;
+                        margin-bottom: 15px;
+                        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .resource-card p {
+                        color: rgba(255, 255, 255, 0.9);
+                        font-size: 1.1em;
+                        line-height: 1.5;
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                    }
+
+                    @media (max-width: 768px) {
+                        .resources-container {
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 20px;
+                        }
+
+                        .resource-card {
+                            width: 100%;
+                            max-width: 300px;
+                        }
+                    }
+                </style>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> contact@unobioinformatics.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#databases">Databases</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UNO Bioinformatics. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
